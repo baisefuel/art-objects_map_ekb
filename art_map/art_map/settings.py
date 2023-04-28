@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 
-OSM_API_KEY = 'xjfQPrmXDa5tPfZMcPZqVFqYsHRLFNYDznPWCG0d'
-OSM_API_URL = 'https://api.openstreetmap.org/api/0.6/'
+# OSM_API_KEY = 'xjfQPrmXDa5tPfZMcPZqVFqYsHRLFNYDznPWCG0d'
+# /OSM_API_URL = 'https://api.openstreetmap.org/api/0.6/'
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
