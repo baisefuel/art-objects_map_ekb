@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+GDAL_LIBRARY_PATH = 'C:/Users/sbril/fitness_tracker/art-objects_map_ekb/venv/Lib/site-packages/osgeo/gdal301.dll'
 
 # Application definition
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.gis.db.models',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',

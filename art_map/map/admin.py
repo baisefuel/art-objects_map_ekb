@@ -3,7 +3,7 @@ from .models import ArtObject
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('photo', 'text', 'description') 
+    list_display = ('photo', 'text', 'description')
 
 
 admin.site.register(ArtObject)
