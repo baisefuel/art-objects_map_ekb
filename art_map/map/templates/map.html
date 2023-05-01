@@ -1,17 +1,55 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
 
-{% block content %}
-<div id="map"></div>
-{% endblock %}
+<html lang="en">
 
-{% block javascript %}
-<script src="{% static 'leaflet/leaflet.js' %}"></script>
-<script>
-var map = L.map('map').setView([56.8405, 60.6042], 15);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-    maxZoom: 15,
-}).addTo(map);
-</script>
-{% endblock %}
+    <title>Арт-Гид Екатеринбурга</title>    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td><a href="">Карта</a></td>
+                <td><a href="">Описание марштрутов</a></td>
+                <td><a href="page2.html">О карте</a></td>
+            </tr>
+        </table>
+    </header>
+
+    <div id="map">
+        <script src="./script.js"></script>
+    </div>
+
+    <!--<div class="route">
+        <span>
+            <label for="route1">Откуда</label>
+            <input type="radio" name="route" id="route1">
+        </span>
+        <span>
+            <label for="route2">Куда</label>
+            <input type="radio" name="route" id="route2">
+        </span>
+        <input type="submit" value="выбрать">
+    </div>
+-->
+
+
+
+</body>
+
+</html>

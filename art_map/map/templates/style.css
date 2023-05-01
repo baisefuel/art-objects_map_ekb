@@ -1,0 +1,90 @@
+
+/*body*/
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    overflow-y: hidden;
+}
+
+/*header*/
+header {
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    background-color: black;
+}
+
+header table  {
+    position: fixed;
+    right: 0;
+}
+
+header table a {
+    
+    font-size: 14pt;
+    margin: 0 15px 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+header table a:hover {
+    
+    color: white;
+    text-decoration: underline;
+}
+
+.btn {
+    top: 200px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*select route*/
+.route {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    width: 10%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.87);
+
+}
+
+.route input {
+
+    border-radius: 5px;
+    height: 30%;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.route span {
+    color: white;
+    padding: 5px 0 5px 0;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.route span input {
+    margin: 0;
+    height: 50%;
+    width: 50%;
+}
