@@ -19,6 +19,6 @@ from map.views import map_view, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', map_view, name='map_view'),
+    path('', map_view, name='map'),
     path('about/', about, name='about'),
 ]
