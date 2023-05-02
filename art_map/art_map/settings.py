@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+if os.name == 'nt':
+    import platform
+    OSGEO4W = r"C:\OSGeo4W"
+
+    assert os.path.isdir(OSGEO4W), "Directory does not exist: " + OSGEO4W
+    os.environ['OSGEO4W_ROOT'] = OSGEO4W
+    os.environ['GDAL_DATA'] = OSGEO4W + r"\share\gdal"
+    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
+    os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
+
 
 
 # OSM_API_KEY = 'xjfQPrmXDa5tPfZMcPZqVFqYsHRLFNYDznPWCG0d'
@@ -28,11 +38,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n*%c55)nl1im^2f=*)_!%mfee%+&x@%k^uxcvy0)c6(p4&=0h4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 GDAL_LIBRARY_PATH = 'C:/Users/sbril/fitness_tracker/art-objects_map_ekb/venv/Lib/site-packages/osgeo/gdal301.dll'
+
+GDAL_DATA = 'C:/Users/sbril/fitness_tracker/art-objects_map_ekb/venv/Lib/site-packages/osgeo/data/gdal'
 
 # Application definition
 
@@ -42,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.gis.db.models',
+    'django.contrib.gis',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -63,7 +77,7 @@ ROOT_URLCONF = 'art_map.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,8 +98,12 @@ WSGI_APPLICATION = 'art_map.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'map',
+        'USER': 'sbril',
+        'PASSWORD': 'ourproject',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -127,3 +145,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
