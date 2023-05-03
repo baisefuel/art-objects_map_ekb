@@ -9,10 +9,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(mymap);
 
 // Добавляем маркер
-var marker = L.marker([56.8469, 60.6071]).addTo(mymap);
+var arrows = L.marker([56.840310, 60.614087]).addTo(mymap);
 
 // Добавляем всплывающее окно к маркеру
-marker.bindPopup("<b>НАЙДИ ГДЕ Я БЛЯТЬ</b><br><img src='./img/1.jpg' style='height:300px;weight:300px;'>");
+arrows.bindPopup("<b>Стрелы</b><br><img src='./img/arrows.png' style='height:300px;width:300px;'>").bindTooltip("Стрелы").openTooltip();
 
 L.control.locate({
   position: "topleft",
