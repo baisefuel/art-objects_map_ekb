@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'art_map/css/style.css' %}" type="text/css">
+    <style>
+        .thumbnail {
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+    <title>О карте</title>
+</head>
+<body>
+    <header>
+        <table>
+            <img class="thumbnail" src="{% static 'art_map/img/logo.png' %}">
+            <tr>
+                <td><a href="{% url 'map' %}">Карта</a></td>
+                <td><a href="{% url 'routes' %}">Описание марштрутов</a></td>
+                <td><a href="">О карте</a></td>
+            </tr>
+        </table>
+    </header>
+    
+    <div class="about">
+        <h1>О карте</h1>
+        <p>Сайт с картой арт-объектов Екатеринбурга, с готовыми маршрутами для максимального охвата арт-объектов города и с их описанием.</p>
+        <h1>Для кого это?</h1>
+        <p>Эта карта с маршрутами подойдет для любого, кто желает окунуться в атмосферу города Екатеринбурга, и взглянуть на него иначе</p>
+        <h1>Немного о нас</h1>
+        <p>ja web MMM</p>
+        
+    </div>
+</body>
+</html>
