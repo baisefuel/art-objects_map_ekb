@@ -6,14 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'art_map/css/style.css' %}" type="text/css">
+    <style>
+        .thumbnail {
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
     <title>О карте</title>
 </head>
 <body>
     <header>
         <table>
+            <img class="thumbnail" src="{% static 'art_map/img/logo.png' %}">
             <tr>
                 <td><a href="{% url 'map' %}">Карта</a></td>
-                <td><a href="">Описание марштрутов</a></td>
+                <td><a href="{% url 'routes' %}">Описание марштрутов</a></td>
                 <td><a href="">О карте</a></td>
             </tr>
         </table>

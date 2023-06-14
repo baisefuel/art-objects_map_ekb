@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path
-from map.views import map_view, about
+from map.views import map_view, about, routes
 from django.conf.urls.static import static
 
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', map_view, name='map'),
     path('about/', about, name='about'),
+    path('routes/', routes, name="routes")
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

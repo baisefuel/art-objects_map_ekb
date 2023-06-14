@@ -6,3 +6,6 @@ def map_view(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def routes(request):
+    return render(request, 'routes.html')
