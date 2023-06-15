@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Russo+One&display=swap');
 /*body*/
 body {
     margin: 0px;
@@ -7,6 +7,7 @@ body {
     font-family: "Roboto", sans-serif;
     overflow-y: hidden;
     background-color: white;
+    background-image: url(../img/backfon.png);
     animation-duration: 1s;
     animation-name: body;
 }
@@ -83,6 +84,8 @@ header table a:hover {
 /*about paga*/
 .about{
     width: 100%;
+    background-size: auto;
+    font-family: 'Russo One', sans-serif;
 }
 .about h1,p{
     animation-duration: 1.5s;
