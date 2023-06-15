@@ -105,6 +105,7 @@ header table a:hover {
 
 /*select route*/
 .route {
+    z-index: 9999;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -121,26 +122,35 @@ header table a:hover {
 
 }
 
-.route input {
-
-    border-radius: 5px;
-    height: 30%;
-    margin-bottom: 10px;
-    width: 70%;
-}
-
 .route span {
-    color: white;
     padding: 5px 0 5px 0;
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.route span input {
-    margin: 0;
-    height: 50%;
-    width: 50%;
-}
+
+.my-button {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+  }
+  
+  .my-button:hover {
+    background-color: #444444;
+  }
+  
+  .my-button:active {
+    background-color: #444444;
+  }
